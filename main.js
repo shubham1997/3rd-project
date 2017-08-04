@@ -3,7 +3,18 @@
 //        var message = 'Welcome Back, ' + email;
 //        $('.welcome-message').text(message);
 //    });
-var foodieApp = angular.module('foodieApp',[]);
+var foodieApp = angular.module('foodieApp',['ngRoute']);
+foodieApp.config(function ($routeProvider) {
+	$routeProvider
+	.when('/',{
+		templateUrl: 'pages/login.html',
+		controller: 'loginController'
+	})
+	.when('/home',{
+		templateUrl: 'pages/main.html',
+		controller: 'mainController'
+	})
+})
 
 foodieApp.controller('mainController',function($scope) {
 	$scope.restaurants = [{
@@ -50,4 +61,7 @@ foodieApp.controller('mainController',function($scope) {
 	hours: '12 Noon to 1 AM (Mon-Sun)',
 	image: 'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg'
 }];
+})
+
+foodieApp.controller('loginController',function($scope) {
 })
