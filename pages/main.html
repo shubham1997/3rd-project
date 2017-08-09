@@ -15,9 +15,11 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Order Online</a></li>
-                    </ul>
+                    <li><a href="#!/home">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Order Online</a></li>
+                    <li><a href="#!/">Logout</a></li>
+                </ul>
                 </div>
                 
                 <div class="search-bar">
@@ -53,7 +55,7 @@
                <div ng-repeat="restaurant in restaurants | filter:query" class="restaurant">
     <div class="rest-wrapper">
         <div class="image">
-            <img src="{{restaurant.image}}" height="100" width="100">
+            <img ng-src="{{restaurant.image}}" height="100" width="100">
         </div>
         <div class="rest-info">
             <div class="rest-category">
