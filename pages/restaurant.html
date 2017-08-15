@@ -35,6 +35,7 @@
             </div>
 	        <span>{{restaurant.bestDish.name}} </span>
 	        <div ng-click="getIngredients(restaurant.bestDish.image)" class="button" >Get Ingredients</div>
+            <div  class="button" ng-init= "getIngredients(restaurant.bestDish.image)"><a href="#!/todolist " ng-click="getIngredients(restaurant.bestDish.image)">List</a></div>
 		</div>
     </div>
 </div>
@@ -42,7 +43,7 @@
         <strong>{{restaurant.vote}}</strong>
     </div>
 </div>
-<div ng-if="ingredients">
+<div ng-if="ingredients && x==1">
     <ol>
     <li ng-repeat="ingredient in ingredients">
     {{ingredient}}
